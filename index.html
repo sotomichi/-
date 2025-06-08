@@ -1,0 +1,34 @@
+# -
+空前絶後の超絶占いは、あなたの運命を一刀両断する最強占いアプリ。 ボタンを押すだけで、今日という一日が“神の日”か“地獄の日”かが明らかに…！ 占いの結果は、大吉から大凶まで超絶バリエーション。ドキドキしながらお試しあれ！
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>今日の占い</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
+    button { font-size: 1.5em; padding: 10px 30px; }
+    #result { font-size: 2em; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <h1>🔮 今日の運勢</h1>
+  <button onclick="showFortune()">占う！</button>
+  <div id="result"></div>
+
+  <script>
+    const fortunes = [
+      '🌟 大吉：最高の一日になります！',
+      '😊 中吉：いい感じの運勢です。',
+      '😐 小吉：まあまあ平和な日です。',
+      '😅 凶：慎重に過ごしましょう。',
+      '💀 大凶：今日はおとなしく...'
+    ];
+
+    function showFortune() {
+      const result = fortunes[Math.floor(Math.random() * fortunes.length)];
+      document.getElementById('result').innerText = result;
+    }
+  </script>
+</body>
+</html>
